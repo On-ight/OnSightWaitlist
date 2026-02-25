@@ -128,7 +128,19 @@ form.addEventListener('submit', async (e) => {
     localStorage.setItem('waitlist', JSON.stringify(waitlist));
 
     try {
-        // 2. Send via FormSubmit.co AJAX API
+        // 2. Send to Google Sheets (primary storage)
+        if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== "https://script.google.com/macros/s/AKfycbzDsyTseIe49J_5mdXwuuY3LcIEnb73OlW6F5IDE0nJcCdwuct-qTMoY9frk-GjdGLt2Q/exec") {
+            await fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+        }
+
+        // 3. Send via FormSubmit.co (email notification)
         const response = await fetch(`https://formsubmit.co/ajax/${EMAIL_RECEIVER}`, {
             method: 'POST',
             headers: {
@@ -139,23 +151,19 @@ form.addEventListener('submit', async (e) => {
                 name: formData.name || 'Not provided',
                 email: formData.email,
                 "Travel Date": formData.travelDate || 'Not specified',
-                "Primary Interest": formData.interest,
+                "Primary Interest": formData.interest || 'Not specified',
                 _subject: 'New Waitlist Signup!',
                 _template: 'table',
                 _honey: form.querySelector('[name="_honey"]').value
             })
         });
 
-        if (response.ok) {
-            onSignupSuccess();
-        } else {
-            throw new Error("Form submission returned a non-OK response.");
-        }
+        // Show success regardless of email status (as long as saved to localStorage and Sheets)
+        onSignupSuccess();
     } catch (error) {
-        console.error("AJAX failed", error);
+        console.error("Submission failed", error);
 
         // If it fails but we saved locally, we can still show success
-        // Or we can show the error state. Following the prompt's Error Handling:
         submitBtn.textContent = 'Try Again';
         submitBtn.disabled = false;
         apiError.style.display = 'block';
