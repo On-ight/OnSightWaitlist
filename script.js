@@ -30,7 +30,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // Constants
 // 🛑 IMPORTANT: Add your Google Sheets Web App URL here after setup
 // Follow instructions in SETUP.md to create your Google Sheet
-const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SHEET_WEB_APP_URL_HERE";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzDsyTseIe49J_5mdXwuuY3LcIEnb73OlW6F5IDE0nJcCdwuct-qTMoY9frk-GjdGLt2Q/exec";
 
 // Email receiver for FormSubmit.co (backup notification)
 const EMAIL_RECEIVER = "onsight565@gmail.com";
