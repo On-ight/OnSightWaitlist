@@ -179,7 +179,7 @@
 
     <h3>Which feature intrigues you the most?</h3>
 
-    <select name="interest" class="interest-dropdown">
+    <select id="interest" name="interest" class="interest-dropdown">
         <option value="">Select an option</option>
         <option value="AI Itinerary">AI itinerary planning</option>
         <option value="Hidden Gems">Discover hidden gems</option>
@@ -197,17 +197,26 @@
 
             <input type="text" name="_honey" style="display:none">
 
-            <input type="text" name="name" placeholder="Your name">
+            <input type="text" id="name" name="name" placeholder="Your name">
 
-            <input type="email" name="email" required placeholder="Your email">
+            <input type="email" id="email" name="email" required placeholder="Your email">
+            <div class="form-error" id="email-error" style="display: none; color: #d32f2f; font-size: 0.85rem; margin-top: 5px;">Please enter a valid email</div>
+            <div class="form-error" id="api-error" style="display: none; color: #d32f2f; font-size: 0.85rem; margin-top: 5px;">Something went wrong. Please try again.</div>
 
-            <input type="text" name="travelDate" placeholder="Any thoughts?">
+            <input type="text" id="travelDate" name="travelDate" placeholder="Any thoughts?">
 
-            <button type="submit" class="primary-btn">
+            <button type="submit" id="submit-btn" class="primary-btn">
                 Get Early Access
             </button>
 
         </form>
+
+        <div class="success-message" id="success-container" style="display: none; text-align: center; padding: 40px 20px;">
+            <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
+            <h3 style="color: #10b981; font-size: 1.8rem; margin-bottom: 10px;">You're on the waitlist!</h3>
+            <p>Check your email for updates</p>
+            <p id="success-number" style="font-size: 1.2rem; font-weight: 700; color: #667eea; margin-top: 20px;">Yayy</p>
+        </div>
 
     </div>
 

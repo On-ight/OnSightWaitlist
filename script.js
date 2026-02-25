@@ -95,6 +95,21 @@ form.addEventListener('submit', async (e) => {
         return;
     }
 
+    // Check for duplicate email in localStorage
+    let waitlist;
+    try {
+        waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
+    } catch (e) {
+        waitlist = [];
+    }
+
+    const alreadyExists = waitlist.some(entry => entry.email === emailVal);
+    if (alreadyExists) {
+        apiError.textContent = 'This email is already on the waitlist!';
+        apiError.style.display = 'block';
+        return;
+    }
+
     // Change button text
     submitBtn.textContent = 'Joining...';
     submitBtn.disabled = true;
@@ -109,19 +124,8 @@ form.addEventListener('submit', async (e) => {
     };
 
     // 1. Save to localStorage (immediate backup)
-    let waitlist;
-    try {
-        waitlist = JSON.parse(localStorage.getItem('waitlist') || '[]');
-    } catch (e) {
-        waitlist = [];
-    }
-
-    // Check for duplicates in local storage to prevent double submission
-    const isDuplicate = waitlist.some(entry => entry.email === formData.email);
-    if (!isDuplicate) {
-        waitlist.push(formData);
-        localStorage.setItem('waitlist', JSON.stringify(waitlist));
-    }
+    waitlist.push(formData);
+    localStorage.setItem('waitlist', JSON.stringify(waitlist));
 
     try {
         // 2. Send via FormSubmit.co AJAX API
