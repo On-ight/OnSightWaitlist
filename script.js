@@ -28,10 +28,13 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // Constants
-// 🛑 IMPORTANT FOR ADMIN: Change this to your real personal email!
-// Responses will immediately be emailed to this address by FormSubmit.co.
+// 🛑 IMPORTANT: Add your Google Sheets Web App URL here after setup
+// Follow instructions in SETUP.md to create your Google Sheet
+const GOOGLE_SHEET_URL = "YOUR_GOOGLE_SHEET_WEB_APP_URL_HERE";
+
+// Email receiver for FormSubmit.co (backup notification)
 const EMAIL_RECEIVER = "onsight565@gmail.com";
-const STARTING_COUNT = 523; // Will display as 523 initially
+const STARTING_COUNT = 10; // Will display as 523 initially
 
 // Counter Logic
 function getWaitlistCount() {
