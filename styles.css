@@ -210,6 +210,12 @@ body {
     padding: 12px;
     border-radius: 6px;
     border: none;
+    box-sizing: border-box;
+}
+
+.interest-dropdown {
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 /* FOOTER */
