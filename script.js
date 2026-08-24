@@ -13,6 +13,14 @@ window.addEventListener('load', () => {
             }
         });
     }, 100);
+
+    // Safety net: reveal anything still hidden (e.g. no scroll yet, crawler
+    // rendering without scroll events) so content never stays permanently invisible
+    setTimeout(() => {
+        document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
+            el.classList.add('visible');
+        });
+    }, 2000);
 });
 
 // Intersection Observer for fade-in animations on scroll

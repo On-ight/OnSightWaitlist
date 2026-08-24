@@ -4,112 +4,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnSight — Smart Travel Companion for India</title>
+    <title>OnSight — Know Any Place Like a Local | AI Travel Companion for India</title>
 
     <meta name="description"
-        content="AI-powered travel companion for India. Plan trips, discover hidden gems, avoid scams, meet travelers, and explore confidently.">
+        content="OnSight is an AI-powered travel companion for India. Plan trips with AI, get a virtual guide while you explore, discover hidden gems through Side Quests, join local activities, and travel with more confidence. Launching first in Delhi.">
+    <meta name="theme-color" content="#0a1410">
 
+    <link rel="canonical" href="https://onsight.co.in/">
+
+    <link rel="icon" href="onsight_logo.jpeg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="onsight_logo.jpeg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OnSight — Know Any Place Like a Local">
+    <meta property="og:description"
+        content="An AI-powered travel companion for India — plan, discover, explore, connect, and experience places with confidence. Launching first in Delhi.">
+    <meta property="og:image" content="https://onsight.co.in/onsight_logo.jpeg">
+    <meta property="og:url" content="https://onsight.co.in/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OnSight — Know Any Place Like a Local">
+    <meta name="twitter:description"
+        content="An AI-powered travel companion for India — plan, discover, explore, connect, and experience places with confidence.">
+    <meta name="twitter:image" content="https://onsight.co.in/onsight_logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <noscript><style>.fade-in { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 
 <body>
 
+    <!-- NAV -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <a href="#top" class="nav-logo">
+                <img src="onsight_logo.jpeg" alt="OnSight" width="132" height="42" decoding="async">
+            </a>
+            <nav class="nav-links">
+                <a href="#product">Product</a>
+                <a href="#sidequests">Side Quests</a>
+                <a href="#community">Community</a>
+                <a href="#why">Why OnSight</a>
+            </nav>
+            <button class="nav-cta" onclick="scrollToForm()">Join Early Access</button>
+        </div>
+    </header>
+
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
 
         <div class="hero-inner">
 
-            <div class="badge">Smart Travel Companion for India</div>
+            <div class="badge">Smart Travel Companion for India · Launching in Delhi</div>
 
             <h1>
-                Travel India <span>Smarter</span>.
-                <br>
-                Not Harder.
+                Know Any Place <span>Like a Local.</span>
             </h1>
 
             <p class="subtext">
-                AI-powered travel companion for international visitors, Indian travelers,
-                and locals exploring their own cities — plan smarter, explore deeper,
-                and move confidently.
+                India doesn't have a discovery problem. It has a decision problem.
+                OnSight brings AI trip planning, real-time guidance, hidden gems, and a
+                traveler community into one companion — so you always know what to do next.
             </p>
 
             <button class="primary-btn" onclick="scrollToForm()">
                 Join Early Access
             </button>
 
+            <p class="hero-proof">Be among the first travelers to get access</p>
+
         </div>
 
     </section>
 
-    <!-- EXPERIENCE STRIP -->
-    <section class="experience-strip">
-
-        <div>Plan with AI</div>
-        <div>Explore Hidden Gems</div>
-        <div>Avoid Scams</div>
-        <div>Meet Travelers</div>
-        <div>Travel Confidently</div>
-
+    <!-- JOURNEY STRIP -->
+    <section class="experience-strip fade-in">
+        <div><span class="step-num">01</span>Plan</div>
+        <div class="arrow">→</div>
+        <div><span class="step-num">02</span>Discover</div>
+        <div class="arrow">→</div>
+        <div><span class="step-num">03</span>Explore</div>
+        <div class="arrow">→</div>
+        <div><span class="step-num">04</span>Connect</div>
+        <div class="arrow">→</div>
+        <div><span class="step-num">05</span>Experience</div>
     </section>
 
     <!-- CORE VALUE -->
-    <section class="core">
+    <section class="core fade-in" id="product">
 
         <h2>Your Travel Brain for India</h2>
-        <p>
-            You shouldn’t need Google Maps, blogs, YouTube, and WhatsApp groups just to travel safely.
-            OnSight puts everything into one intelligent system.
+        <p class="section-lead">
+            You shouldn't need Google Maps, ChatGPT, Instagram, blogs, and five WhatsApp groups
+            just to figure out what to do next. OnSight puts everything into one intelligent system
+            that understands where you are and what you actually want.
         </p>
 
         <div class="core-grid">
 
             <div class="core-card">
-                <h3>AI Itinerary</h3>
-                <p>Personalized trip planning based on time, budget, and interests.</p>
+                <div class="card-icon">🧭</div>
+                <h3>AI Itinerary Planner</h3>
+                <p>Tell it your time, budget, and interests — get a personalized plan instead of another
+                    generic "Top 10" list.</p>
             </div>
 
             <div class="core-card">
+                <div class="card-icon">💬</div>
+                <h3>AI Virtual Guide</h3>
+                <p>A companion that explains the history and context of where you are, and answers
+                    "what's interesting near me right now?"</p>
+            </div>
+
+            <div class="core-card">
+                <div class="card-icon">💎</div>
                 <h3>Hidden Gems</h3>
-                <p>Places locals love but tourists never discover.</p>
+                <p>Local cafés, walks, and neighborhoods that never make it into the standard tourist
+                    itinerary.</p>
             </div>
 
             <div class="core-card">
-                <h3>Scam Protection</h3>
-                <p>Real-time alerts before problems happen.</p>
-            </div>
-
-            <div class="core-card">
-                <h3>Audio Guidance</h3>
-                <p>Stories, context, and insights while you walk.</p>
+                <div class="card-icon">🛡️</div>
+                <h3>Travel Confidence</h3>
+                <p>Fair-price context and common-scam awareness, so you can explore more confidently —
+                    not a promise of guaranteed safety.</p>
             </div>
 
         </div>
 
     </section>
 
+    <!-- SIDE QUESTS -->
+    <section class="sidequests fade-in" id="sidequests">
+
+        <h2>Every Trip Is a Story.<br>Side Quests Are the Unexpected Parts.</h2>
+        <p class="section-lead">
+            Instead of a blog, OnSight has Side Quests — small, specific things worth doing that
+            real travelers and locals discover along the way. Save them, complete them, or let them
+            turn a free afternoon into an adventure.
+        </p>
+
+        <div class="quest-grid">
+
+            <div class="quest-card">
+                <span class="quest-tag">Sunset · Free</span>
+                <h3>Watch the sunset at Lodhi Garden</h3>
+                <p>Golden light over Mughal-era tombs, minus the crowds of the usual monuments.</p>
+            </div>
+
+            <div class="quest-card">
+                <span class="quest-tag">Café · ₹</span>
+                <h3>Find the tiny café in Majnu Ka Tila</h3>
+                <p>A Tibetan-colony hideaway most tourists walk straight past.</p>
+            </div>
+
+            <div class="quest-card">
+                <span class="quest-tag">Night · 2 hrs</span>
+                <h3>Late-night photography walk near Connaught Place</h3>
+                <p>The colonial arcades look nothing like they do at noon.</p>
+            </div>
+
+            <div class="quest-card">
+                <span class="quest-tag">Morning · Free</span>
+                <h3>Walk through Mehrauli Archaeological Park</h3>
+                <p>Centuries of ruins, almost no ticket lines, and hardly anyone else around.</p>
+            </div>
+
+        </div>
+
+        <p class="quest-footnote">New Side Quests are added by explorers every week — join early access to
+            start collecting yours.</p>
+
+    </section>
+
     <!-- COMMUNITY -->
-    <section class="community">
+    <section class="community fade-in" id="community">
 
         <h2>Travel Alone, But Never Lonely</h2>
+        <p class="section-lead">
+            "Taking a walk in Cubbon Park at 6 PM — anyone want to join?" Post it, others discover it,
+            and you coordinate the rest in a group chat. It's not a social network — it's people doing
+            things in the real world.
+        </p>
 
         <div class="community-grid">
 
             <div class="community-card">
                 <h3>Open Activities</h3>
-                <p>Join walks, food explorations, and city meetups.</p>
+                <p>Join walks, food explorations, and city meetups posted by other travelers and locals.</p>
             </div>
 
             <div class="community-card">
                 <h3>Traveler Chats</h3>
-                <p>Connect with people visiting the same city.</p>
+                <p>Connect with people visiting — or living in — the same city as you, right now.</p>
             </div>
 
             <div class="community-card">
                 <h3>Local Blogs</h3>
-                <p>Stories and insights from real travelers and locals.</p>
+                <p>Stories and on-the-ground insights from real travelers and locals, not listicles.</p>
             </div>
 
         </div>
@@ -117,15 +213,13 @@
     </section>
 
     <!-- SAFETY -->
-    <section class="safety">
+    <section class="safety fade-in">
 
-        <h2>Built for Safe Exploration</h2>
-        <p>Especially for solo travelers, women, and first-time visitors navigating India.</p>
-
-        <h2>Explore India With Confidence</h2>
+        <h2>Explore India With More Confidence</h2>
         <p>
-        OnSight is designed for solo travelers, women, and first-time visitors
-        who want freedom without fear.
+            Especially built with solo travelers, women, and first-time visitors in mind — because
+            freedom to explore shouldn't come with constant second-guessing. OnSight doesn't promise
+            guaranteed safety; it helps you make more informed decisions with better context.
         </p>
 
         <div class="safety-points">
@@ -136,43 +230,82 @@
         </div>
 
     </section>
-<!-- Who its for -->
-    <section class="audience">
 
-    <h2>Built for Every Explorer</h2>
+    <!-- Who its for -->
+    <section class="audience fade-in">
 
-    <div class="audience-grid">
+        <h2>Built for Every Explorer</h2>
+        <p class="section-lead">Not just tourists — anyone who wants to know a place a little better.</p>
 
-        <div>
-            🌍 First-time visitors to India
+        <div class="audience-grid">
+
+            <div>
+                <span class="audience-emoji">🌍</span>
+                <h3>International visitors</h3>
+                <p>Navigating India for the first time</p>
+            </div>
+
+            <div>
+                <span class="audience-emoji">🧳</span>
+                <h3>Domestic travelers</h3>
+                <p>Beyond the generic tourist trail</p>
+            </div>
+
+            <div>
+                <span class="audience-emoji">🎒</span>
+                <h3>Solo travelers</h3>
+                <p>Company and context, on demand</p>
+            </div>
+
+            <div>
+                <span class="audience-emoji">👩</span>
+                <h3>Solo women travelers</h3>
+                <p>More awareness, more confidence</p>
+            </div>
+
+            <div>
+                <span class="audience-emoji">✨</span>
+                <h3>Gen Z explorers</h3>
+                <p>Hidden gems over generic tourism</p>
+            </div>
+
+            <div>
+                <span class="audience-emoji">🏙</span>
+                <h3>Locals</h3>
+                <p>Rediscovering their own city</p>
+            </div>
+
         </div>
 
-        <div>
-            🇮🇳 Indians traveling to new cities
-        </div>
+    </section>
 
-        <div>
-            🏙 Locals planning weekend outings
-        </div>
+    <!-- WHY ONSIGHT -->
+    <section class="why fade-in" id="why">
 
-        <div>
-            👩 Solo travelers seeking safety
-        </div>
+        <h2>Not Another Itinerary App</h2>
+        <p class="section-lead">
+            Maps help you navigate. Chatbots help you plan. Social media inspires you. Review sites help
+            you evaluate. Marketplaces help you book. Each solves one moment — and you're left stitching
+            them together. OnSight brings planning, discovery, real-time guidance, community, and local
+            experiences around you, into one companion that gets more useful the more it understands your trip.
+        </p>
+        <p class="why-quote">"OnSight helps travelers answer one simple question — what should I do next?"</p>
+        <div class="why-tag">Starting in Delhi, expanding across India</div>
 
-    </div>
-
-</section>
+    </section>
 
     <!-- WAITLIST -->
-    <section id="waitlist-section" class="waitlist">
+    <section id="waitlist-section" class="waitlist fade-in">
 
     <div class="waitlist-inner">
 
         <h2>Be Part of the First Smarter Travel Movement</h2>
         <p>
-            We’re building OnSight with early travelers.
+            We're building OnSight with early travelers in Delhi and beyond.
             Tell us what excites you most.
         </p>
+
+        <div id="form-container">
 
         <!-- FEATURE INTEREST -->
        <div class="feature-interest">
@@ -182,9 +315,9 @@
     <select id="interest" name="interest" class="interest-dropdown">
         <option value="">Select an option</option>
         <option value="AI Itinerary">AI itinerary planning</option>
-        <option value="Hidden Gems">Discover hidden gems</option>
+        <option value="AI Guide">AI virtual travel guide</option>
+        <option value="Side Quests">Side Quests & hidden gems</option>
         <option value="Scam Alerts">Real-time scam alerts</option>
-        <option value="Audio Guide">AI audio guide</option>
         <option value="Community">Activities & traveler community</option>
         <option value="Safety">Safe routes & price insights</option>
         <option value="All">Everything</option>
@@ -200,8 +333,8 @@
             <input type="text" id="name" name="name" placeholder="Your name">
 
             <input type="email" id="email" name="email" required placeholder="Your email">
-            <div class="form-error" id="email-error" style="display: none; color: #d32f2f; font-size: 0.85rem; margin-top: 5px;">Please enter a valid email</div>
-            <div class="form-error" id="api-error" style="display: none; color: #d32f2f; font-size: 0.85rem; margin-top: 5px;">Something went wrong. Please try again.</div>
+            <div class="form-error" id="email-error" style="display: none;">Please enter a valid email</div>
+            <div class="form-error" id="api-error" style="display: none;">Something went wrong. Please try again.</div>
 
             <input type="text" id="travelDate" name="travelDate" placeholder="Any thoughts?">
 
@@ -211,11 +344,13 @@
 
         </form>
 
-        <div class="success-message" id="success-container" style="display: none; text-align: center; padding: 40px 20px;">
-            <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
-            <h3 style="color: #10b981; font-size: 1.8rem; margin-bottom: 10px;">You're on the waitlist!</h3>
+        </div>
+
+        <div class="success-message" id="success-container" style="display: none;">
+            <div class="success-icon">✅</div>
+            <h3>You're on the waitlist!</h3>
             <p>Check your email for updates</p>
-            <p id="success-number" style="font-size: 1.2rem; font-weight: 700; color: #667eea; margin-top: 20px;">Yayy</p>
+            <p id="success-number">Yayy</p>
         </div>
 
     </div>
@@ -225,8 +360,10 @@
     <!-- FOOTER -->
     <footer>
 
+        <img src="onsight_logo.jpeg" alt="OnSight" width="112" height="36" class="footer-logo" loading="lazy" decoding="async">
         <p>Built to protect travelers, not exploit them.</p>
         <p>Email: <a href="mailto:onsight565@gmail.com">onsight565@gmail.com</a></p>
+        <p class="footer-copyright">© 2026 OnSight. All rights reserved.</p>
 
     </footer>
 
